@@ -19,10 +19,12 @@ Extracted from [Recall Relay](https://github.com/blucca/recall-relay), where an 
 Node 22+. The versioned package is distributed through GitHub Releases:
 
 ```sh
-npm install https://github.com/blucca/relay-state/releases/download/v0.1.0/blucca-relay-state-0.1.0.tgz
+npm install --allow-remote=root https://github.com/blucca/relay-state/releases/download/v0.1.1/blucca-relay-state-0.1.1.tgz
 ```
 
 The package includes JavaScript, TypeScript declarations and the MIT license. Runtime dependencies: 0.
+
+npm 12 uses an explicit setting for URL dependencies. `--allow-remote=root` permits the package requested above. For repeatable `npm install` / `npm ci`, put `allow-remote=root` in your consuming project's `.npmrc`; the Return Desk example includes this setting.
 
 ## Add a store
 

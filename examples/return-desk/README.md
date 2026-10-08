@@ -16,6 +16,8 @@ npm start
 
 Open **http://127.0.0.1:4320**. In a second terminal, from the same directory:
 
+The example's `.npmrc` sets `allow-remote=root` for npm 12's explicit URL-dependency setting. Its dependency points to the versioned Relay State release.
+
 ```sh
 # Discover the two tools through the official MCP SDK.
 npm run demo -- tools

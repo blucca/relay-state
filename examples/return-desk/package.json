@@ -10,7 +10,7 @@
     "demo": "node demo-client.mjs"
   },
   "dependencies": {
-    "@blucca/relay-state": "https://github.com/blucca/relay-state/releases/download/v0.1.0/blucca-relay-state-0.1.0.tgz",
+    "@blucca/relay-state": "https://github.com/blucca/relay-state/releases/download/v0.1.1/blucca-relay-state-0.1.1.tgz",
     "@modelcontextprotocol/sdk": "1.32.1"
   }
 }
