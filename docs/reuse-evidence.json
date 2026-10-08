@@ -1,0 +1,39 @@
+{
+  "verified_at": "2026-10-08T22:45:00.645057+00:00",
+  "package": {
+    "name": "@blucca/relay-state",
+    "version": "0.1.1",
+    "install_url": "https://github.com/blucca/relay-state/releases/download/v0.1.1/blucca-relay-state-0.1.1.tgz",
+    "sha256": "5d4bf4c901ec0783c12c8c722152a5f1cfbea10b78bad4d68d690d57cee4f6ff",
+    "runtime_dependencies": 0,
+    "bytes": 7087
+  },
+  "consumer": "Return Desk",
+  "driver": "Official MCP SDK CLI; a fresh client process per command",
+  "synthetic_sample": true,
+  "task_id": "return-b02e2c2f-6cd7-45e3-9a07-365f5a6c0e3d",
+  "steps": [
+    {
+      "action": "external MCP label write",
+      "id": "return-b02e2c2f-6cd7-45e3-9a07-365f5a6c0e3d",
+      "revision": 1,
+      "next": "Hand over the parcel",
+      "same_tab": "same-open-tab-round82"
+    },
+    {
+      "action": "server restart and fresh MCP read",
+      "id": "return-b02e2c2f-6cd7-45e3-9a07-365f5a6c0e3d",
+      "revision": 1,
+      "snapshot_matches_label_result": true
+    }
+  ],
+  "distinct_server_processes": 2,
+  "final_revision": 3,
+  "main_frame_navigations": 1,
+  "browser_page_errors": [],
+  "mobile_width": 390,
+  "mobile_overflow": 0,
+  "library_checks_passed": 6,
+  "typescript": "7.0.2 / strict / NodeNext",
+  "ok": true
+}

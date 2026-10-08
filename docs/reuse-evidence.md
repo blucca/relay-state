@@ -4,15 +4,17 @@ Verified October 9, 2026, using Node.js 26.10.0, Chromium 153 and the official M
 
 ## Packaged second consumer
 
-Return Desk was copied to a separate directory and installed with ordinary `npm install`. Its imports of `@blucca/relay-state` and `@blucca/relay-state/http` resolved to the installed package inside that consumer's own `node_modules`.
+Return Desk was copied to a separate directory and installed from the public GitHub Release URL with ordinary `npm install`. Its imports of `@blucca/relay-state` and `@blucca/relay-state/http` resolved to the installed package inside that consumer's own `node_modules`.
 
-Artifact: **`@blucca/relay-state@0.1.0`**, 6,980-byte compressed package, zero runtime dependencies.
+Artifact: **`@blucca/relay-state@0.1.1`**, 7,087-byte compressed package, zero runtime dependencies.
 
 SHA-256:
 
 ```text
-7938b4aea9995460f152c39317bf17f6dde2bff1ede66f082b3a5271af3647e5
+5d4bf4c901ec0783c12c8c722152a5f1cfbea10b78bad4d68d690d57cee4f6ff
 ```
+
+The public download returned HTTP 200 and matched this SHA-256 byte for byte. npm 12.2.0 used the consumer’s committed `allow-remote=root` setting. [Structured run summary](reuse-evidence.json).
 
 The [Return Desk instructions](../examples/return-desk/README.md) reproduce the workflow through its official SDK CLI. Each command creates a fresh MCP client process. The browser observes the same committed object over SSE.
 
