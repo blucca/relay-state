@@ -1,0 +1,19 @@
+{
+  "name": "@blucca/relay-state",
+  "version": "0.1.0",
+  "description": "Committed JSON snapshots shared by MCP tools and live companion screens.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "exports": {
+    ".": { "types": "./src/index.d.mts", "import": "./src/index.mjs" },
+    "./http": { "types": "./src/http.d.mts", "import": "./src/http.mjs" }
+  },
+  "files": ["src", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "license": "MIT",
+  "author": "blucca",
+  "repository": { "type": "git", "url": "git+https://github.com/blucca/relay-state.git" },
+  "homepage": "https://github.com/blucca/relay-state#readme",
+  "bugs": "https://github.com/blucca/relay-state/issues",
+  "keywords": ["mcp", "state", "sse", "persistence", "local-first"]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "relay-state-return-desk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A small MCP return tracker with a durable task and a live browser view.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.mjs",
+    "demo": "node demo-client.mjs"
+  },
+  "dependencies": {
+    "@blucca/relay-state": "https://github.com/blucca/relay-state/releases/download/v0.1.0/blucca-relay-state-0.1.0.tgz",
+    "@modelcontextprotocol/sdk": "1.32.1"
+  }
+}

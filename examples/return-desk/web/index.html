@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf2eb">
+  <title>Return Desk · Relay State example</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.mjs"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">↗</span> Return Desk</a>
+    <span class="connection" id="connection" role="status">Connecting to saved return…</span>
+  </header>
+  <main>
+    <div class="eyebrow">A Relay State developer example</div>
+    <h1>One return.<br>Every next step.</h1>
+    <p class="intro">An MCP client records progress. This page stays in sync.<br class="wide"> Your saved return carries on through a fresh session.</p>
+
+    <section id="loading" class="loading" role="status">Loading saved return…</section>
+    <div id="desk" class="desk" hidden>
+      <section class="return-card" aria-labelledby="item-name">
+        <div class="card-top"><span class="eyebrow" id="order"></span><span id="stage" class="pill"></span></div>
+        <div class="item-heading"><div><h2 id="item-name"></h2><p id="merchant"></p></div><strong id="amount" class="amount"></strong></div>
+        <div class="sample-note">Fictional order · user-reported progress</div>
+        <section class="next-action" aria-labelledby="next-title" aria-live="polite">
+          <span class="eyebrow">Your next action</span>
+          <h3 id="next-title"></h3>
+          <p id="next-description"></p>
+          <div class="command-row"><code id="next-command"></code><button type="button" id="copy-command">Copy</button></div>
+          <span class="command-hint">Run in your second terminal, from examples/return-desk.</span>
+        </section>
+        <div class="progress-heading"><h3>Saved progress</h3><span id="progress"></span></div>
+        <ol class="timeline" id="timeline"></ol>
+        <footer class="task-meta"><span id="task-id"></span><span id="revision"></span></footer>
+      </section>
+
+      <aside class="developer-card" aria-labelledby="continuity-title">
+        <div class="eyebrow">Try the continuity</div>
+        <h2 id="continuity-title">Leave the chat.<br> Keep the task.</h2>
+        <ol class="walkthrough">
+          <li><strong>Record a real MCP write</strong><p>Run the next-action command. Watch this page update as the saved revision changes.</p></li>
+          <li><strong>Restart the server</strong><p>Press Ctrl+C in the server terminal, then run <code>npm start</code> again. Keep the same state file.</p></li>
+          <li><strong>Resume with a fresh client</strong><p>Run <code>npm run demo -- read</code>. The new MCP session reads the same task, references and next action.</p></li>
+        </ol>
+        <div class="architecture"><span>MCP tool</span><span aria-hidden="true">↓</span><strong>Durable snapshot</strong><span aria-hidden="true">↓</span><span>This live view</span></div>
+        <p class="scope">Sample scope: one local return, one server process, a file-backed store. Label, parcel and refund updates come from your reports.</p>
+      </aside>
+    </div>
+    <footer class="page-footer"><span>Built with <a href="https://github.com/blucca/relay-state">@blucca/relay-state</a> + the official MCP SDK</span><span>Browser view via Server-Sent Events</span></footer>
+  </main>
+</body>
+</html>
